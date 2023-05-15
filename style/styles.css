@@ -9,3 +9,16 @@ h2{
     font-weight: bold !important;
     text-align: center !important;
 }
+
+.showBalance{
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#totalrevenuePlaceholder{
+    color: green;
+}
+
+#totalexpensePlaceholder{
+    color: red;
+}
