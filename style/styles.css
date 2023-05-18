@@ -10,15 +10,15 @@ h2{
     text-align: center !important;
 }
 
-.showBalance{
+.guthabenAnzeigen{
     font-weight: bold;
     font-size: 25px;
 }
 
-#totalrevenuePlaceholder{
+#einnahmenTotalPlatzhalter{
     color: green;
 }
 
-#totalexpensePlaceholder{
+#ausgabenTotalPlatzhalter{
     color: red;
 }
