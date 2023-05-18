@@ -25,7 +25,7 @@ let variabelName = 0;
 Da du in der Programmlogik die Einnahmen und Ausgaben einlesen musst, 
 musst du auf die HTML-Elemente zugreifen können. 
 Dafür musst du die HTML-Elemente in JavaScript Variablen speichern.
-Dafür musst du die Funktion `document.getElementById()` verwenden.
+Ein HTML-Element kannst du mit der Funktion `document.getElementById()` in einer JavaScript Variabel speichern.
 
 Die Funktion `document.getElementById()` gibt dir das HTML-Element mit der angegebenen ID zurück.
 ```javascript
