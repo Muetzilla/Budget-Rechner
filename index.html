@@ -12,7 +12,7 @@
     <h1>Budget Rechner</h1>
     <!-- Einnahmen -->
     <h2>Einnahmen hinzufügen</h2>
-    <form>
+    <form id="addRevenueForm">
         <div class="form-group row">
             <label for="revenueInput" class="col-sm-2 col-form-label">Einnahmen</label>
             <div class="col-sm-10">
@@ -26,10 +26,11 @@
             </div>
         </div>
     </form>
+
     <hr>
     <!-- Ausgaben -->
     <h2>Ausgaben hinzufügen</h2>
-    <form>
+    <form id="addExpensesForm">
         <div class="form-group row">
             <label for="expensesInput" class="col-sm-2 col-form-label">Ausgaben</label>
             <div class="col-sm-10">
@@ -39,7 +40,7 @@
 
         <div class="form-group row">
             <div class="col-sm-10">
-                <button type="button" class="btn btn-primary" onclick="handleExpanses()">Hinzufügen</button>
+                <button type="button" class="btn btn-primary" onclick="handleExpenses()">Hinzufügen</button>
             </div>
         </div>
     </form>
