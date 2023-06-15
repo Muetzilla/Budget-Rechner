@@ -5,7 +5,7 @@ Wenn du an irgendeinem Schritt der Meinung bist, du kannst die Aufgabe auch ohne
 
 ## Erklärung bestehender Code
 
-Die ersten beiden Variablen, welche definiert enthalten Zahlen. Sie sind jeweils wie der Namen es verrät für das Total der Einnahmen und Ausgaben zuständig.
+Die ersten beiden Variablen, welche definiert sind enthalten Zahlen. Sie sind jeweils wie der Namen es verrät für das Total der Einnahmen und Ausgaben zuständig.
 
 Die restlichen Variablen sind Referenzen zu unserer Webseitenstruktur, welche sich in der `budgetrechner.html` Datei befindet.
 
@@ -26,11 +26,11 @@ In dem vorgegebenen Code befinden sich bereits 2 Funktionen, diese werden benutz
 Die Funktion `einnahmeVerarbeiten` wird aufgerufen, 
 sobald man den Knopf um eine Einnahme hinzuzufügen drückt.
 Sie liest die Einnahme aus dem Eingabefeld, 
-ruft die zweite methode auf und setzt das Formular zurück.
+ruft die zweite Methode auf und setzt das Formular zurück.
 
 Die zweite Funktion (`einnahmenBerechnen`) erhält eine Zahl als Parameter, 
 fügt diesen zu dem Total der Einnahmen hinzu 
-und schreibt das neue total in das Text-Element
+und schreibt das neue Total in das Text-Element
 
 ## Implementation der Ausgaben
 
@@ -42,11 +42,11 @@ Die Funktionen sollten folgende Namen haben:
 - ausgabenBerechnen
 
 Sobald du dies gemacht hast, kannst du die `budgetrechner.html` Datei in einem Webbrowser nach Wahl öffnen, und die Funktionen testen.
-Falls etwas nicht funktioniert, kannst du gerne uns nach Hilfe fragen kommen.
+Falls etwas nicht funktioniert, kannst du gerne uns nach Hilfe fragen.
 
 ## Zusatzaufgabe: Budget
 
-Falls du die letzte Aufgabe gemeistert hast, und noch Zeit übrig hast, ist es das Ziel die Funktion zu erstellen, das jedes Mal wenn eine Einnahme oder Ausgabe hinzugefügt wird, das Budget errechnet und angezeigt wird.
+Falls du die letzte Aufgabe gemeistert hast, und noch Zeit übrig hast, ist es das Ziel die Funktion zu erstellen, das jedes Mal wenn eine Einnahme oder Ausgabe hinzugefügt wird, das Budget berechnet und angezeigt wird.
 Die Funktion kannst du benennen wie du willst, und sollte folgenden Ablauf haben.
 
 1. Variable `budget` mit folgendem Wert erstellen. (`totalEinnahmen - totalAusgaben`)
