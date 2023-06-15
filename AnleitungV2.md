@@ -5,7 +5,7 @@ Wenn du an irgendeinem Schritt der Meinung bist, du kannst die Aufgabe auch ohne
 
 ## Erklärung bestehender Code
 
-Die ersten beiden Variablen, welche definiert sind enthalten Zahlen. Sie sind jeweils, wie der Name es verrät, für das Total der Einnahmen und Ausgaben zuständig.
+Die ersten beiden Variablen, welche definiert sind enthalten Zahlen. Sie sind jeweils, wie es der Name verrät, für das Total der Einnahmen und Ausgaben zuständig.
 
 Die restlichen Variablen sind Referenzen zu unserer Webseitenstruktur, welche sich in der `budgetrechner.html` Datei befindet.
 
