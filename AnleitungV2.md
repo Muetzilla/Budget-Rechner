@@ -3,120 +3,56 @@
 Diese Anleitung soll dir helfen die fehlenden Funktionen des Budgetrechners zu programmieren und so eine Webseite zu erstellen, auf welcher du deine Ausgaben und deine Einnahmen verfolgen kannst.
 Wenn du an irgendeinem Schritt der Meinung bist, du kannst die Aufgabe auch ohne Hilfe der Anleitung schaffen dann kannst du es natürlich auch ohne Anleitung versuchen. Natürlich stehen wir dir auch jederzeit bei Fragen zu Verfügung.
 
-## 1. Schritt
+## Erklärung bestehender Code
 
-Definiere am Anfang der Datei `budgetrechner.js` folgende Variablen:
+Die ersten beiden Variablen, welche definiert enthalten Zahlen. Sie sind jeweils wie der Namen es verrät für das Total der Einnahmen und Ausgaben zuständig.
 
-- `totalEinnahmen` mit dem Wert `0`
-- `totalAusgaben` mit dem Wert `0`
+Die restlichen Variablen sind Referenzen zu unserer Webseitenstruktur, welche sich in der `budgetrechner.html` Datei befindet.
 
-Variablen in JavaScript werden wie folgt erstellt:
+| Variable Name              | HTML Element                                        |
+|----------------------------|-----------------------------------------------------|
+| einnahmeHinzufuegenElement | Das Eingabefeld für die Einnahmen                   |
+| einnahmeFormularElement    | Das Formular in welchem sich die Einnahmen befinden |
+| ausgabeHinzufuegenElement  | Das Eingabefeld für die Ausgaben                    |
+| ausgabenFormularElement    | Das Formular in welchem sich die Ausgaben befinden  |
+| einnahmenTotalElement      | Der Text, in dem die Einnahmen angezeigt werden     |
+| ausgabenTotalElement       | Der Text, in dem die Einnahmen angezeigt werden     |
+| budgetElement              | Der Text, in dem das Budget angezeigt wird          |
 
-```javascript
-// Eine Variable mit einem Zahlenwert
-let variabelName = 0;
-```
+### Funktionen
 
-## 2. Schritt
+In dem vorgegebenen Code befinden sich bereits 2 Funktionen, diese werden benutzt um die Einnahmen zu berechnen.
 
-Da du in der Programmlogik die Einnahmen und Ausgaben einlesen musst,
-musst du auf die HTML-Elemente zugreifen können.
-Dafür musst du die HTML-Elemente in JavaScript Variablen speichern.
-Ein HTML-Element kannst du mit der Funktion `document.getElementById()` in einer JavaScript Variabel speichern.
+Die Funktion `einnahmeVerarbeiten` wird aufgerufen, 
+sobald man den Knopf um eine Einnahme hinzuzufügen drückt.
+Sie liest die Einnahme aus dem Eingabefeld, 
+ruft die zweite methode auf und setzt das Formular zurück.
 
-Die Funktion `document.getElementById()` gibt dir das HTML-Element mit der angegebenen ID zurück.
+Die zweite Funktion (`einnahmenBerechnen`) erhält eine Zahl als Parameter, 
+fügt diesen zu dem Total der Einnahmen hinzu 
+und schreibt das neue total in das Text-Element
 
-```javascript
-// HTML-Element mit der ID "id" wird in der Variable htmlElement gespeichert
-let htmlElement = document.getElementById("id");
-```
+## Implementation der Ausgaben
 
-Erstelle nun also folgende Variablen und finde das jeweilige HTML-Element in der `budgetrechner.html` Datei
+Deine Aufgabe ist es jetzt die gleichen Funktionen für die Ausgaben zu erstellen.
+Der Aufbau ist eigentlich genau derselbe, jedoch unterscheiden sich die benötigten Variablen.
 
-- `einnahmeHinzufuegenElement` das `input`-Element, in dem die Einnahme eingegeben wird
-- `einnahmeFormularElement` das `form`-Element, in dem das `input`-Element für die Einnahme und das `button`-Element zum Hinzufügen der Einnahme enthalten sind
-- `einnahmenTotalElement` das `span`-Element, in dem die Summe der Einnahmen angezeigt wird
+Die Funktionen sollten folgende Namen haben:
+- einnahmenBerechnen
+- ausgabenBerechnen
 
-## 3. Schritt
+Sobald du dies gemacht hast, kannst du die `budgetrechner.html` Datei in einem Webbrowser nach Wahl öffnen, und die Funktionen testen.
+Falls etwas nicht funktioniert, kannst du gerne uns nach Hilfe fragen kommen.
 
-Nun musst du noch die Funktion erstellen, welche die Einnahmen hinzufügt.
-Dafür musst du die Funktionen `einnahmeVerarbeiten()` erstellen.
+## Zusatzaufgabe: Budget
 
-In JavaScript werden Funktionen wie folgt erstellt:
+Falls du die letzte Aufgabe gemeistert hast, und noch Zeit übrig hast, ist es das Ziel die Funktion zu erstellen, das jedes Mal wenn eine Einnahme oder Ausgabe hinzugefügt wird, das Budget errechnet und angezeigt wird.
+Die Funktion kannst du benennen wie du willst, und sollte folgenden Ablauf haben.
 
-```javascript
-// Funktion mit dem Namen "funktionName" wird erstellt
-function funktionName() {
-  // Hier kommt der Code der Funktion rein
-}
-```
+1. Variable `budget` mit folgendem Wert erstellen. (`totalEinnahmen - totalAusgaben`)
+2. Variable `budget` dem `.innerHTML` von `budgetElement` zuweisen. (Wie in einnahmenBerechnen)
 
-Die Funktion `einnahmeVerarbeiten()` soll folgendes machen:
-
-- Die Einnahme aus dem `input`-Element für die Einnahme auslesen
-- Die Funktion `einnahmenBerechnen(parseFloat(einnahme))` aufrufen
-- Das Formular zurücksetzen
-
-Wie du sehen kannst, wird die Oben genannten Funktion `einnahmenBerechnen()` mit einem Parameter aufgerufen.
-Das bedeutet, dass du der Funktion einen Wert übergeben musst.
-In diesem Fall ist der Wert, welcher übergeben werden muss, die Einnahme.
-Ausserdem wird der Wert in der Funktion `parseFloat()` übergeben.
-Diese Funktion wandelt den Wert in eine Zahl um.
-
-Um ein Formular zurückzusetzen, kannst du die Funktion `reset()` auf dem Formular aufrufen.
-
-```javascript
-// In diesem Beispiel wird das Formular `einnahmeFormularElement` zurückgesetzt
-einnahmeFormularElement.reset();
-```
-
-## 4. Schritt
-
-Nun musst du noch die Funktion erstellen, welche die Einnahmen berechnen.
-Dafür musst du die Funktion `einnahmenBerechnen()` erstellen.
-
-Um diese Funktion umzusetzen, musst du wissen, wie man einer Funktion einen Parameter übergibt, und HTML-Elemente manipuliert.
-
-Um eine Funktion mit Parameter zu erstellen, musst du den Namen des Parameters in den Klammern der Funktion angeben.
-
-```javascript
-// Funktion mit dem Namen "funktionName" wird erstellt
-function funktionName(parameterName) {
-  // Hier kommt der Code der Funktion rein
-}
-```
-
-Um ein HTML-Element zu manipulieren, musst du die Funktion `innerHTML` auf dem HTML-Element aufrufen.
-
-```javascript
-// In diesem Beispiel wird der Text des HTML-Elements `htmlElement` auf "Hallo Welt" gesetzt
-htmlElement.innerHTML = "Hallo Welt";
-```
-
-Nun weisst du alles was du für die beiden Funktionen brauchst.
-Diese sollten folgendes machen:
-
-- Die Einnahme zur Variabel `totalEinnahmen` hinzufügen.
-- In das HTML-Element die Summe der Einnahmen schreiben.
-
-## 5. Schritt
-
-Nun kannst du deinen Code testen, indem du die Datei `index.html` im Internet Browser öffnen.
-Du kannst in das Eingabefeld für die Einnahmen eine beliebige Zahl schreiben, und den Knopf drücken um sie hinzuzufügen.
-Deine eigegebene Zahl sollte jetzt unten stehen.
-Wenn du eine neue Zahl als Einnahmen hinzufügst, sollte die Zahl hinzugefügt werden.
-
-## 6. Schritt
-
-Die Schritte 1-5 kannst du jetzt wiederholen für die Ausgaben.
-Erstelle dazu neu die gleichen Variabeln wie für die Einnahmen, jedoch mit anderen Namen und anderen "IDs"
-Die neuen Funktionen sollten `ausgabenBerechnen()` und `ausgabeVerarbeiten()`
-
-## 7. Schritt
-
-Zum Schluss kannst du noch dein Guthaben anzeigen lassen.
-Erstelle dazu eine Funktion welche in das HTML-Element `guthabenTotalPlatzhalter` die Differenz zwischen `totalEinnahmen` und `totalAusgaben` schreibt.
-Diese Funktion muss am Ende von `ausgabenBerechnen()` und `ausgabeVerarbeiten()` aufgerufen werden.
+Beachte ausserdem das diese Funktion am Ende von `einnahmenBerechnen` und `ausgabenBerechnen` aufgerufen wird.
 
 ## Abschluss
 
@@ -126,4 +62,4 @@ Wenn du jetzt am Budgetrechner noch weiterarbeiten möchtest und einige weitere 
 
 - Du könntest das Design des Budgetrechners noch nach deinen Wünschen anpassen, sodass es dir besser gefällt
 - Aktuell musst du, wenn du einen Fehler gemacht hast den Betrag als negativen Betrag eingeben. Du könntest also ein Feld hinzufügen, mit welchem man Ausgaben & Einnahmen wieder entfernen kannst.
-- Das Guthaben, Ausgaben und Einnahmen werden aktuell nicht gespeichert. Wenn du also die Seite neu lädst, sind alle Eingaben verloren. Du könntest also dafür sorgen, dass das Guthaben, die Ausgaben und die Einnahmen auch beim Neuladen der Seite wieder vorhanden sind. Ein guter Anfang wäre der [LocalStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) in Javascript.
+- Das Guthaben, Ausgaben und Einnahmen werden aktuell nicht gespeichert. Wenn du also die Seite neu lädst, sind alle Eingaben verloren. Du könntest also dafür sorgen, dass das Guthaben, die Ausgaben und die Einnahmen auch beim Neuladen der Seite wieder vorhanden sind. Ein guter Anfang wäre der [LocalStorage](https://wiki.selfhtml.org/wiki/JavaScript/Web_Storage) in Javascript.
