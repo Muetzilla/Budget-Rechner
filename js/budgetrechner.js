@@ -1,4 +1,3 @@
-//Beginne hier gemäss dem Auftrag in der Anleitung
 let totalEinnahmen = 0;
 let totalAusgaben = 0;
 
