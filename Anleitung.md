@@ -38,8 +38,8 @@ Deine Aufgabe ist es jetzt die gleichen Funktionen für die Ausgaben zu erstelle
 Der Aufbau ist eigentlich genau derselbe, jedoch unterscheiden sich die benötigten Variablen.
 
 Die Funktionen sollten folgende Namen haben:
-- einnahmenBerechnen
 - ausgabenBerechnen
+- ausgabeVerarbeiten
 
 Sobald du dies gemacht hast, kannst du die `budgetrechner.html` Datei in einem Webbrowser nach Wahl öffnen, und die Funktionen testen.
 Falls etwas nicht funktioniert, kannst du gerne uns nach Hilfe fragen.
